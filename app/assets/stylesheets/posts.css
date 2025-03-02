@@ -1,26 +1,114 @@
+/* General Container Styling */
 .container {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin: 10px;
-    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 15px auto;
+    width: 95%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Form Styling */
 form {
-    margin: 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-}
-input{
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    gap: 15px;
 }
 
-.postsContainer {
+input {
+    width: 85%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #3f51b5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+}
+
+/* Container for all posts */
+.posts-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 20px auto; /* Center-align posts */
+    padding: 10px;
+}
+
+/* Individual Post Card */
+.post-card {
+    background-color: #fff; /* White background for card */
+    border-radius: 10px; /* Rounded corners for card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    justify-content: center;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.post-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Title Styling */
+.post-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Post Author Styling */
+.post-card h4 {
+    font-size: 1rem;
+    color: #3f51b5;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Post Content Styling */
+.post-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Subtle Divider (Optional) */
+.post-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 10px 0;
+}
+
+/* Responsive Design for Posts */
+@media (max-width: 768px) {
+    .posts-container {
+        padding: 10px;
+    }
+
+    .post-card {
+        padding: 12px;
+    }
+
+    .post-card h3 {
+        font-size: 1rem;
+    }
+
+    .post-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .post-card p {
+        font-size: 0.9rem;
+    }
 }
