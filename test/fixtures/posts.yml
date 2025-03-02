@@ -12,7 +12,7 @@ post_one:
 
 post_two:
   title: "Second Post"
-  body: "This is the second post."
+  content: "This is the second post."
   author: "Jane Doe"
   user_id: 2
 # column: value
