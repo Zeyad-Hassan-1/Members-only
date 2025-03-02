@@ -1,7 +1,9 @@
 require "test_helper"
 
 class PostControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    sign_in users(:one) # Ensure user is signed in
+    get posts_url
+    assert_response :success
+  end
 end
