@@ -39,6 +39,9 @@ jobs:
       - name: Install Importmap
         run: bundle add importmap-rails
 
+      - name: Make bin/rails executable
+        run: chmod +x bin/rails
+
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bin/rails importmap:audit
 
