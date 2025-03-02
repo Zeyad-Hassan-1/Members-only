@@ -22,7 +22,7 @@ jobs:
         run: bundle add brakeman --group development,test
 
       - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
+        run: bundle exec brakeman --no-pager
 
   scan_js:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
         run: bundle add importmap-rails
 
       - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bin/importmap audit
+        run: bundle exec importmap audit
 
   lint:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
         run: bundle add rubocop --group development,test
 
       - name: Lint code for consistent style
-        run: bin/rubocop -f github
+        run: bundle exec rubocop -f github
 
   test:
     runs-on: ubuntu-latest
